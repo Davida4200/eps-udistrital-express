@@ -1,4 +1,3 @@
-import { timeStamp } from 'console';
 import { Table, Column, Model, DataType, HasMany } from 'sequelize-typescript';
 import { Cita } from './cita.model'
 

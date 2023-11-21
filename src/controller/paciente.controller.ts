@@ -49,9 +49,11 @@ export const createPaciente: RequestHandler = async (req, res) => {
       message: 'Paciente creado!',
       data: paciente
     })
-  } catch (error:any) {
+  } catch (error) {
+    const err = error as Error;
     res.status(500).json({
-      message: 'No se pudo crear el paciente'
+      message: 'No se pudo crear el paciente',
+      error: err.stack
     })
   }
 }
@@ -102,7 +104,7 @@ export const deletePaciente: RequestHandler = async (req, res) => {
     }
   } catch (error:any) {
     res.status(500).json({
-      message: 'Paciente modificado',
+      message: 'Error al eliminar el paciente',
       error: error.message
     })
   }
