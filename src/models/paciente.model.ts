@@ -7,11 +7,11 @@ import { Cita } from './cita.model'
 })
 export class Paciente extends Model {
   @Column({
-    type: DataType.INTEGER,
+    type: DataType.STRING(14),
     allowNull: false,
     primaryKey: true
   })
-  id_numeroCedula!: number
+  cedula_paciente!: string
 
   @Column({
     type: DataType.STRING,

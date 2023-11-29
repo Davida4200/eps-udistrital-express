@@ -65,7 +65,7 @@ export const updatePaciente: RequestHandler = async (req, res) => {
     if(paciente){
       await Paciente.update(req.body, {
         where: {
-          id_numeroCedula: req.params.id
+          cedula_paciente: req.params.id
         }
       })
       res.status(200).json({
@@ -91,7 +91,7 @@ export const deletePaciente: RequestHandler = async (req, res) => {
     if(paciente){
       await Paciente.destroy({
         where: {
-          id_numeroCedula: req.params.id
+          cedula_paciente: req.params.id
         }
       })
       res.status(200).json({

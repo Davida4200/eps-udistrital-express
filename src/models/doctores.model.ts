@@ -1,4 +1,3 @@
-import { timeStamp } from 'console';
 import { Table, Column, Model, DataType, HasMany } from 'sequelize-typescript';
 import { Cita } from './cita.model'
 
@@ -8,11 +7,11 @@ import { Cita } from './cita.model'
 })
 export class Doctor extends Model {
   @Column({
-    type: DataType.INTEGER,
+    type: DataType.STRING(14),
     allowNull: false,
     primaryKey: true
   })
-  id_profesional!: number
+  cedula_profesional!: string
 
   @Column({
     type: DataType.STRING,
@@ -37,12 +36,6 @@ export class Doctor extends Model {
     allowNull: false,
   })
   telefono!: string
-
-  @Column({
-    type: DataType.ENUM('medicina_interna', 'medicina_general'),
-    allowNull: false,
-  })
-  especialidad!: string
 
   @HasMany( () => Cita)
   cita!: Cita []

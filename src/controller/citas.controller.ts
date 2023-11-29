@@ -76,7 +76,7 @@ export const updateCita: RequestHandler = async (req, res) => {
         fecha_hora: fecha,
         id_profesional: profesional,
         id_numeroCedula: paciente
-    }
+      }
     })
 
     if (cita){
