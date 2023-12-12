@@ -21,13 +21,73 @@ export const getCitas: RequestHandler = async (req, res) => {
 
 export const getOneCita: RequestHandler = async (req, res) => {
   try {
-    const { profesional, paciente, fecha } = req.query
+    const { profesional, paciente, fecha, consultorio, especialidad } = req.query
 
     const cita = await Cita.findOne({
       where: {
         fecha_hora: fecha,
-        id_profesional: profesional,
-        id_numeroCedula: paciente
+        cedula_profesional: profesional,
+        cedula_paciente: paciente,
+        id_consultorio: consultorio,
+        id_especialidad: especialidad
+      }
+    })
+
+    if (cita){
+      res.status(200).json({
+        message: 'Cita encontrada',
+        data: cita
+      })
+    } else {
+      res.status(404).json({
+        message: 'Cita no encontrada'
+      })
+    }
+
+  } catch (error:any) {
+    res.status(500).json({
+      message: 'Error al obtener las citas',
+      error: error.message
+    })
+  }
+}
+
+export const getCitaByPaciente: RequestHandler = async (req, res) => {
+  try {
+    const { paciente } = req.query
+
+    const cita = await Cita.findOne({
+      where: {
+        cedula_paciente: paciente
+    }
+    })
+
+    if (cita){
+      res.status(200).json({
+        message: 'Cita encontrada',
+        data: cita
+      })
+    } else {
+      res.status(404).json({
+        message: 'Cita no encontrada'
+      })
+    }
+
+  } catch (error:any) {
+    res.status(500).json({
+      message: 'Error al obtener los doctores',
+      error: error.message
+    })
+  }
+}
+
+export const getCitaByDoctor: RequestHandler = async (req, res) => {
+  try {
+    const { profesional } = req.query
+
+    const cita = await Cita.findOne({
+      where: {
+        cedula_profesional: profesional
     }
     })
 
@@ -69,13 +129,15 @@ export const createCita: RequestHandler = async (req, res) => {
 
 export const updateCita: RequestHandler = async (req, res) => {
   try {
-    const { profesional, paciente, fecha } = req.query
+    const { profesional, paciente, fecha, consultorio, especialidad } = req.query
 
     const cita = await Cita.findOne({
       where: {
         fecha_hora: fecha,
-        id_profesional: profesional,
-        id_numeroCedula: paciente
+        cedula_profesional: profesional,
+        cedula_paciente: paciente,
+        id_consultorio: consultorio,
+        id_especialidad: especialidad
       }
     })
 
@@ -83,9 +145,11 @@ export const updateCita: RequestHandler = async (req, res) => {
       await Cita.update(req.body, {
         where: {
           fecha_hora: fecha,
-          id_profesional: profesional,
-          id_numeroCedula: paciente
-      }
+          cedula_profesional: profesional,
+          cedula_paciente: paciente,
+          id_consultorio: consultorio,
+          id_especialidad: especialidad
+        }
     })
     res.status(200).json({
       message: 'Cita actualizada'
@@ -105,22 +169,26 @@ export const updateCita: RequestHandler = async (req, res) => {
 
 export const deleteCita: RequestHandler = async (req, res) => {
   try {
-    const { profesional, paciente, fecha } = req.query
+    const { profesional, paciente, fecha, consultorio, especialidad } = req.query
 
     const cita = await Cita.findOne({
       where: {
         fecha_hora: fecha,
-        id_profesional: profesional,
-        id_numeroCedula: paciente
-    }
+        cedula_profesional: profesional,
+        cedula_paciente: paciente,
+        id_consultorio: consultorio,
+        id_especialidad: especialidad
+      }
     })
 
     if (cita){
       await Cita.destroy({
         where: {
           fecha_hora: fecha,
-          id_profesional: profesional,
-          id_numeroCedula: paciente
+          cedula_profesional: profesional,
+          cedula_paciente: paciente,
+          id_consultorio: consultorio,
+          id_especialidad: especialidad
         }
       })
       res.status(200).json({

@@ -6,7 +6,7 @@ const router = Router();
 router.get('/', getConsultorios)
 router.get('/:id_consultorio', getConsultorioById)
 router.post('/', createConsultorio)
-router.put('', updateConsultorio)
+router.put('/', updateConsultorio)
 router.delete('/:id_consultorio', deleteConsultorio)
 
 export default router;

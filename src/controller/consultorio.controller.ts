@@ -50,6 +50,7 @@ export const getConsultorioById: RequestHandler = async (req, res) => {
 
 export const createConsultorio: RequestHandler = async (req, res) => {
   try {
+    console.log(req.body);
     const consultorio = await Consultorio.create(req.body)
 
     res.status(201).json({

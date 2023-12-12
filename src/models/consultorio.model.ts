@@ -7,7 +7,7 @@ import { Cita } from './cita.model';
 })
 export class Consultorio extends Model {
   @Column({
-    type: DataType.STRING,
+    type: DataType.STRING(10),
     allowNull: false,
     primaryKey: true
   })

@@ -6,9 +6,9 @@ import { createDocEsp, deleteDocEsp, getDocEsp, getOneDocEsp, updateDocEsp } fro
 const router = Router();
 
 router.get('/', getDocEsp)
-router.get('/:id', getOneDocEsp)
+router.get('/get-one', getOneDocEsp)
 router.post('/', createDocEsp)
-router.put('/:id', updateDocEsp)
-router.delete('/:id', deleteDocEsp)
+router.put('/', updateDocEsp)
+router.delete('/', deleteDocEsp)
 
 export default router;
