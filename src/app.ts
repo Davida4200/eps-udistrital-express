@@ -9,6 +9,8 @@ import doctorRoutes from './routes/doctor.routes'
 import citaRoutes from './routes/citas.routes'
 import espRoutes from './routes/especialidad.routes'
 import docEspRoutes from './routes/dEsp.routes'
+import consultorioRoutes from './routes/consultorio.routes'
+
 
 dotenv.config();
 
@@ -33,6 +35,7 @@ app.use('/api/doctores', doctorRoutes)
 app.use('/api/citas', citaRoutes)
 app.use('/api/especialidades', espRoutes)
 app.use('/api/doc-esp', docEspRoutes)
+app.use('/api/consultorios', consultorioRoutes)
 
 
 // Error de rutas
