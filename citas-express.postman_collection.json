@@ -1,0 +1,952 @@
+{
+	"info": {
+		"_postman_id": "4f4cb7dd-a346-4b61-bf3a-5064a498a921",
+		"name": "citas-express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30157073"
+	},
+	"item": [
+		{
+			"name": "Pacientes",
+			"item": [
+				{
+					"name": "Get all pacientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/pacientes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pacientes",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get paciente by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/pacientes/12345678991",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pacientes",
+								"12345678991"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create paciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_paciente\": \"456\",\r\n    \"nombre\": \"Fredy\",\r\n    \"apellido\": \"Ramirez\",\r\n    \"fecha_nacimiento\": \"2004-10-08T00:00:00.000Z\",\r\n    \"telefono\": \"314382091\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/pacientes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pacientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify paciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_paciente\": \"987654321\",\r\n    \"nombre\": \"Raul\",\r\n    \"apellido\": \"Contreras\",\r\n    \"fecha_nacimiento\": \"1998-11-19T12:22:00.000Z\",\r\n    \"telefono\": \"434125\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/pacientes/987654321",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pacientes",
+								"987654321"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete paciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/pacientes/987654321",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pacientes",
+								"987654321"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Peticiones para los pacientes"
+		},
+		{
+			"name": "Doctores",
+			"item": [
+				{
+					"name": "Get all doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/doctores/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doctores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get doctor by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/doctores/ABC123456789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doctores",
+								"ABC123456789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_profesional\": \"FGH456789\",\r\n    \"nombre\": \"Norbey\",\r\n    \"apellido\": \"Canon\",\r\n    \"correo\": \"ncanon@gmail.com\",\r\n    \"telefono\": \"3821093\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/doctores/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doctores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update doctor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_profesional\": \"FGH456789\",\r\n    \"nombre\": \"Norbey\",\r\n    \"apellido\": \"Canon\",\r\n    \"correo\": \"ncanon@gmail.com\",\r\n    \"telefono\": \"3821093\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/doctores/FGH456789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doctores",
+								"FGH456789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/doctores/FGH456789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doctores",
+								"FGH456789"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Peticiones de los doctores"
+		},
+		{
+			"name": "Especialidades",
+			"item": [
+				{
+					"name": "Get all especialidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/especialidades/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"especialidades",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one especialidad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/especialidades/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"especialidades",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create especialidad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_especialidad\": \"6\",\r\n    \"nombre_especialidad\": \"Medicina general\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/especialidades/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"especialidades",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify especialidad",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_especialidad\": \"6\",\r\n    \"nombre_especialidad\": \"Medicina general\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/especialidades/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"especialidades",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete especialidad",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/especialidades/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"especialidades",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Peticiones de las especialidades"
+		},
+		{
+			"name": "Doctor_Especialidad",
+			"item": [
+				{
+					"name": "Get all doc_esp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/doc-esp/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doc-esp",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one doc_esp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/doc-esp/get-one?cedula_profesional=GHI456789012&id_especialidad=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doc-esp",
+								"get-one"
+							],
+							"query": [
+								{
+									"key": "cedula_profesional",
+									"value": "GHI456789012"
+								},
+								{
+									"key": "id_especialidad",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create doc_esp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_profesional\": \"GHI456789012\",\r\n    \"id_especialidad\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/doc-esp/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doc-esp",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify doc_esp",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_profesional\": \"GHI456789012\",\r\n    \"id_especialidad\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/doc-esp/?cedula_profesional=GHI456789012&id_especialidad=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doc-esp",
+								""
+							],
+							"query": [
+								{
+									"key": "cedula_profesional",
+									"value": "GHI456789012"
+								},
+								{
+									"key": "id_especialidad",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete doc_esp",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula_profesional\": \"GHI456789012\",\r\n    \"id_especialidad\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/doc-esp/?cedula_profesional=GHI456789012&id_especialidad=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"doc-esp",
+								""
+							],
+							"query": [
+								{
+									"key": "cedula_profesional",
+									"value": "GHI456789012"
+								},
+								{
+									"key": "id_especialidad",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Peticiones de doctor_especialidad"
+		},
+		{
+			"name": "Consultorio",
+			"item": [
+				{
+					"name": "Get all consultorios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/consultorios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"consultorios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one consultorio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/consultorios/301",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"consultorios",
+								"301"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create consultorio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_consultorio\": \"301\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/consultorios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"consultorios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify consultorio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_consultorio\": 301\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/consultorios/?id_consultorio=301",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"consultorios",
+								""
+							],
+							"query": [
+								{
+									"key": "id_consultorio",
+									"value": "301"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete consultorio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/consultorios/305",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"consultorios",
+								"305"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Peticiones de los consultorios"
+		},
+		{
+			"name": "Cita",
+			"item": [
+				{
+					"name": "Get all citas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/citas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"citas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one cita",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/citas/one-cita?fecha=2023-12-15T15:00:00.000Z&profesional=ABC123456789&paciente=123&consultorio=301&especialidad=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"citas",
+								"one-cita"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "2023-12-15T15:00:00.000Z"
+								},
+								{
+									"key": "profesional",
+									"value": "ABC123456789"
+								},
+								{
+									"key": "paciente",
+									"value": "123"
+								},
+								{
+									"key": "consultorio",
+									"value": "301"
+								},
+								{
+									"key": "especialidad",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cita by paciente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/citas/by-paciente?paciente=123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"citas",
+								"by-paciente"
+							],
+							"query": [
+								{
+									"key": "paciente",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cita by doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/citas/by-doctor?profesional=GHI456789012",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"citas",
+								"by-doctor"
+							],
+							"query": [
+								{
+									"key": "profesional",
+									"value": "GHI456789012"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create one cita",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fecha_hora\": \"2024-01-15T10:00:00\",\r\n    \"cedula_profesional\": \"JKL789012345\",\r\n    \"cedula_paciente\": \"45678901234\",\r\n    \"id_consultorio\": \"304\",\r\n    \"id_especialidad\": \"4\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/citas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"citas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update cita",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fecha_hora\": \"2023-12-15T15:00:00.000Z\",\r\n    \"cedula_profesional\": \"ABC123456789\",\r\n    \"cedula_paciente\": \"123\",\r\n    \"id_consultorio\": \"301\",\r\n    \"id_especialidad\": \"3\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/citas/?fecha=2023-12-15T15:00:00.000Z&profesional=ABC123456789&paciente=123&consultorio=301&especialidad=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"citas",
+								""
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "2023-12-15T15:00:00.000Z"
+								},
+								{
+									"key": "profesional",
+									"value": "ABC123456789"
+								},
+								{
+									"key": "paciente",
+									"value": "123"
+								},
+								{
+									"key": "consultorio",
+									"value": "301"
+								},
+								{
+									"key": "especialidad",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/citas/?fecha=2024-01-15T15:00:00.000Z&profesional=GHI456789012&paciente=123&consultorio=304&especialidad=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"citas",
+								""
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "2024-01-15T15:00:00.000Z"
+								},
+								{
+									"key": "profesional",
+									"value": "GHI456789012"
+								},
+								{
+									"key": "paciente",
+									"value": "123"
+								},
+								{
+									"key": "consultorio",
+									"value": "304"
+								},
+								{
+									"key": "especialidad",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Peticiones de las citas"
+		}
+	]
+}
