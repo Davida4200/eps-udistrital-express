@@ -51,6 +51,10 @@ DATABASE_PORT=
 npm run dev
 ```
 
+### 5. Importar la colección de postman:
+En la carpeta raíz del repositorio se encuentra el archivo `citas-express.postman_collection.json`.
+Este archivo debes importarlo en tu postman y tendrás la colección base de esta API, recuerda que se trabaja con **Mysql** con llaves foráneas, por lo que debes crear primero ***pacientes, doctores, especialidades y consultorios***, luego ***doctor_especialidad y citas***.
+
 ## Endpoints disponibles:
 
 ### Endpoint de Pacientes:
